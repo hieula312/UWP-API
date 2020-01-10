@@ -8,31 +8,174 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <ScrollViewer>
-        <StackPanel Margin="20">
-            <Button>Go to list</Button>
-            <TextBlock>Student Form</TextBlock>
-            <TextBlock>First Name</TextBlock>
-            <TextBox x:Name="TxtFirstName"/>
-            <TextBlock>Last Name</TextBlock>
-            <TextBox x:Name="TxtLastName"/>
-            <TextBlock>password</TextBlock>
-            <PasswordBox x:Name="PwdPassword"/>
-            <TextBlock>Confirm password</TextBlock>
-            <PasswordBox x:Name="PwdConfirmPassword"/>
-            <TextBlock>address</TextBlock>
-            <TextBox x:Name="TxtAddress"/>
-            <TextBlock>phone</TextBlock>
-            <TextBox x:Name="TxtPhone"/>
-            <TextBlock>avatar</TextBlock>
-            <TextBox x:Name="TxtAvatar"/>
-            <TextBlock>gender</TextBlock>
-            <TextBox x:Name="TxtGender"/>
-            <TextBlock>email</TextBlock>
-            <TextBox x:Name="TxtEmail"/>
-            <TextBlock>birthday</TextBlock>
-            <TextBox x:Name="TxtBirthday"/>
-            <Button Click="Create_User" Content="Button"/>
-        </StackPanel>
-    </ScrollViewer>
+    <Grid x:Name="main">
+        <Grid.Background>
+            <ImageBrush
+                Stretch="UniformToFill"
+                ScrollViewer.ZoomMode="Disabled"
+                Opacity="0.8"
+                ImageSource="/Assets/img/headphone3.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+             Foreground="Black"
+            Padding="0,00,0,0"
+            FontSize="60">
+            REGISTER
+        </TextBlock>
+        <Grid
+            Grid.Row="1"
+            Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Vertical">
+                <TextBox
+                    Margin="0,10,0,0"
+                    x:Name="fisrtName"
+                    FontSize="25"
+                    Foreground="Black"
+                    PlaceholderText="First Name"/>
+                <TextBlock
+                    x:Name="fisrtNameErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <TextBox
+                    Margin="0,10,0,0"
+                    x:Name="lastName"
+                    FontSize="25"
+                    Foreground="Black"
+                    PlaceholderText="Last Name"/>
+                <TextBlock
+                    x:Name="lastNameErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <TextBox
+                    Margin="0,10,0,0"
+                    x:Name="email"
+					FontSize="25"
+					Foreground="Black"
+                    PlaceholderText="Email"/>
+                <TextBlock
+                    x:Name="emailErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <PasswordBox
+                    x:Name="password"
+                    FontSize="25"
+                    PlaceholderText="Password"
+                    Foreground="Black"/>
+                <TextBlock
+                x:Name="passwordErr"
+                FontSize="15"
+                Foreground="red"
+                TextAlignment="Left"
+                ></TextBlock>
+                <TextBox
+                    Margin="0,10,0,0"
+                    x:Name="address"
+                    FontSize="25"
+                    Foreground="Black"
+                    PlaceholderText="Address"/>
+                <TextBlock
+                    x:Name="addressErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <TextBox
+                    Margin="0,10,0,0"
+                    x:Name="phone"
+                    FontSize="25"
+                    Foreground="Black"
+                    PlaceholderText="Phone Number"/>
+                <TextBlock
+                    x:Name="phoneErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Opacity="0.6"
+                        Margin="0,10,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        Foreground="Black"
+                    >Date of Birth</TextBlock>
+                    <CalendarDatePicker
+                        DateChanged="Birthday_OnDateChanged"
+                        x:Name="birthDay"
+                        Margin="20,10,0,0"
+                        FontSize="25"
+                    ></CalendarDatePicker>
+                </StackPanel>
+                <TextBlock
+                    x:Name="birthdayErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Opacity="0.6"
+                        Margin="0,10,20,0"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        Foreground="Black"
+                    >Gender</TextBlock>
+                    <RadioButton Checked="Gender_Choose" Opacity="0.7" Margin="0,15,0,0" GroupName="gender" Tag="Male" IsChecked="True">Male</RadioButton>
+                    <RadioButton Checked="Gender_Choose" Opacity="0.7"  Margin="0,15,0,0" GroupName="gender" Tag="Female" >Female</RadioButton>
+                    <RadioButton Checked="Gender_Choose" Opacity="0.7"  Margin="0,15,0,0" GroupName="gender" Tag="Other">Other</RadioButton>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Opacity="0.6"
+                        Margin="0,10,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        Foreground="Black"
+                    >Avatar</TextBlock>
+                    <Button Background="Bisque"
+                            Margin="20,10,0,0"
+                            FontSize="25" 
+                            Click="TakePhoto">Capture</Button>
+                </StackPanel>
+                <Grid
+                    Padding="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="623*"/>
+                        <ColumnDefinition Width="127*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        Click="Create_User"
+                        Grid.Column="0"
+                        Background="Bisque"
+                        Margin="276,20,0,0"
+                        FontSize="30" VerticalAlignment="Top">
+                        Register Now
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
 </Page>

@@ -8,32 +8,175 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <ScrollViewer>
-        <StackPanel Margin="20">
-            <Button>Go to list</Button>
-            <TextBlock>Student Form</TextBlock>
-            <TextBlock>First Name</TextBlock>
-            <TextBox x:ConnectionId='2' x:Name="TxtFirstName"/>
-            <TextBlock>Last Name</TextBlock>
-            <TextBox x:ConnectionId='3' x:Name="TxtLastName"/>
-            <TextBlock>password</TextBlock>
-            <PasswordBox x:ConnectionId='4' x:Name="PwdPassword"/>
-            <TextBlock>Confirm password</TextBlock>
-            <PasswordBox x:ConnectionId='5' x:Name="PwdConfirmPassword"/>
-            <TextBlock>address</TextBlock>
-            <TextBox x:ConnectionId='6' x:Name="TxtAddress"/>
-            <TextBlock>phone</TextBlock>
-            <TextBox x:ConnectionId='7' x:Name="TxtPhone"/>
-            <TextBlock>avatar</TextBlock>
-            <TextBox x:ConnectionId='8' x:Name="TxtAvatar"/>
-            <TextBlock>gender</TextBlock>
-            <TextBox x:ConnectionId='9' x:Name="TxtGender"/>
-            <TextBlock>email</TextBlock>
-            <TextBox x:ConnectionId='10' x:Name="TxtEmail"/>
-            <TextBlock>birthday</TextBlock>
-            <TextBox x:ConnectionId='11' x:Name="TxtBirthday"/>
-            <Button x:ConnectionId='12'                     Content="Button"/>
-        </StackPanel>
-    </ScrollViewer>
+    <Grid x:ConnectionId='2' x:Name="main">
+        <Grid.Background>
+            <ImageBrush
+                Stretch="UniformToFill"
+                ScrollViewer.ZoomMode="Disabled"
+                Opacity="0.8"
+                ImageSource="/Assets/img/headphone3.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+             Foreground="Black"
+            Padding="0,00,0,0"
+            FontSize="60">
+            REGISTER
+        </TextBlock>
+        <Grid
+            Grid.Row="1"
+            Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Vertical">
+                <TextBox x:ConnectionId='3'
+                    Margin="0,10,0,0"
+                    x:Name="fisrtName"
+                    FontSize="25"
+                    Foreground="Black"
+                    PlaceholderText="First Name"/>
+                <TextBlock x:ConnectionId='4'
+                    x:Name="fisrtNameErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <TextBox x:ConnectionId='5'
+                    Margin="0,10,0,0"
+                    x:Name="lastName"
+                    FontSize="25"
+                    Foreground="Black"
+                    PlaceholderText="Last Name"/>
+                <TextBlock x:ConnectionId='6'
+                    x:Name="lastNameErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <TextBox x:ConnectionId='7'
+                    Margin="0,10,0,0"
+                    x:Name="email"
+					FontSize="25"
+					Foreground="Black"
+                    PlaceholderText="Email"/>
+                <TextBlock x:ConnectionId='8'
+                    x:Name="emailErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <PasswordBox x:ConnectionId='9'
+                    x:Name="password"
+                    FontSize="25"
+                    PlaceholderText="Password"
+                    Foreground="Black"/>
+                <TextBlock x:ConnectionId='10'
+                x:Name="passwordErr"
+                FontSize="15"
+                Foreground="red"
+                TextAlignment="Left"
+                ></TextBlock>
+                <TextBox x:ConnectionId='11'
+                    Margin="0,10,0,0"
+                    x:Name="address"
+                    FontSize="25"
+                    Foreground="Black"
+                    PlaceholderText="Address"/>
+                <TextBlock x:ConnectionId='12'
+                    x:Name="addressErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <TextBox x:ConnectionId='13'
+                    Margin="0,10,0,0"
+                    x:Name="phone"
+                    FontSize="25"
+                    Foreground="Black"
+                    PlaceholderText="Phone Number"/>
+                <TextBlock x:ConnectionId='14'
+                    x:Name="phoneErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Opacity="0.6"
+                        Margin="0,10,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        Foreground="Black"
+                    >Date of Birth</TextBlock>
+                    <CalendarDatePicker x:ConnectionId='21'
+                                                            
+                        x:Name="birthDay"
+                        Margin="20,10,0,0"
+                        FontSize="25"
+                    ></CalendarDatePicker>
+                </StackPanel>
+                <TextBlock x:ConnectionId='15'
+                    x:Name="birthdayErr"
+                    FontSize="15"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Opacity="0.6"
+                        Margin="0,10,20,0"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        Foreground="Black"
+                    >Gender</TextBlock>
+                    <RadioButton x:ConnectionId='18'                         Opacity="0.7" Margin="0,15,0,0" GroupName="gender" Tag="Male" IsChecked="True">Male</RadioButton>
+                    <RadioButton x:ConnectionId='19'                         Opacity="0.7"  Margin="0,15,0,0" GroupName="gender" Tag="Female" >Female</RadioButton>
+                    <RadioButton x:ConnectionId='20'                         Opacity="0.7"  Margin="0,15,0,0" GroupName="gender" Tag="Other">Other</RadioButton>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock
+                        Opacity="0.6"
+                        Margin="0,10,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="25"
+                        Foreground="Black"
+                    >Avatar</TextBlock>
+                    <Button x:ConnectionId='17' Background="Bisque"
+                            Margin="20,10,0,0"
+                            FontSize="25" 
+                                             >Capture</Button>
+                </StackPanel>
+                <Grid
+                    Padding="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="623*"/>
+                        <ColumnDefinition Width="127*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:ConnectionId='16'
+                                           
+                        Grid.Column="0"
+                        Background="Bisque"
+                        Margin="276,20,0,0"
+                        FontSize="30" VerticalAlignment="Top">
+                        Register Now
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
 </Page>
 

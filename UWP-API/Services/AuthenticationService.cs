@@ -4,8 +4,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using UWP_API.Pages;
 
 namespace UWP_API.Services
 {
@@ -23,15 +25,23 @@ namespace UWP_API.Services
             //Chuyen thanh dang JSON
             var loginJson = JsonConvert.SerializeObject(loginInfo);
             //Dong goi gui len
-            HttpContent contentToSend = new StringContent(loginJson,Encoding.UTF8,CONTENT_TYPE);
+            HttpContent contentToSend = new StringContent(loginJson, Encoding.UTF8, CONTENT_TYPE);
             //Goi shipper
             HttpClient httpClient = new HttpClient();
             //Lay ket qua
             var response = await httpClient.PostAsync(LOGIN_API_URL, contentToSend);
             //Doc ket qua
             var stringcontent = await response.Content.ReadAsStringAsync();
-            return (string) JObject.Parse(stringcontent)["token"];
-            
+            return (string)JObject.Parse(stringcontent)["token"];
+
+        }
+
+        public static async void GetTokenFromFile(StorageFile fileName)
+        {
+            if (fileName.IsAvailable)
+            {
+                LogIn.Token = await FileHandleService.ReadFile(fileName.ToString());
+            }
         }
     }
 }

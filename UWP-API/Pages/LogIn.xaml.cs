@@ -36,10 +36,16 @@ namespace UWP_API.Pages
             var password = this.password.Password;
             var email = this.email.Text;
             Token = await _service.GetToken(email, password);
-            this.Frame.Navigate(typeof(DetailInformation));
-            Debug.Write(Token);
+            LogIn.Token = Token;
+            FileHandleService.WriteToFile("token.txt", Token);
+            this.Frame.Navigate(typeof(MyListSong));
+            Debug.WriteLine(Token);
             //MkNAapOe38lh0zrIT2hsp4aWbtjZvPk3a4ffHgelth5N7qhdzd50hyfdzEZ0MP7Z
+        }
 
+        private void Register_Clicked(object sender, KeyRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Register));
         }
     }
 }

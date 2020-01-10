@@ -34,8 +34,8 @@ namespace UWP_API.Pages
         public async void GetUserInfo()
         {
             User user = await _service.GetUserInfo(LogIn.Token);
-            UserName.Text = user.lastName + user.firstName;
-            UserAddress.Text = user.address;
+            //UserName.Text = user.lastName + user.firstName;
+            //UserAddress.Text = user.address;
         }
     }
 }

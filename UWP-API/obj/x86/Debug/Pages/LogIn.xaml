@@ -8,112 +8,90 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid x:ConnectionId='2' x:Name="main">
+        <Grid.Background>
+            <ImageBrush
+                Stretch="UniformToFill"
+                ScrollViewer.ZoomMode="Disabled"
+                Opacity="0.8"
+                ImageSource="/Assets/img/headphone4.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="3*">
-
             </RowDefinition>
-
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
         <TextBlock
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
              Foreground="Black"
-            Padding="0,40,0,0"
-            TextAlignment="Center"
-            FontSize="90"
-            FontFamily="Times New Roman"
-            >Login</TextBlock>
-        <Grid
+            Padding="0,20,0,0"
+            FontSize="60">
+            SIGN IN
+        </TextBlock>
+        <Grid Margin="0,10,0,0"
             Grid.Row="1"
             Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-
-            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-
             </Grid.ColumnDefinitions>
-            <TextBlock
-                Grid.Row="0"
-                FontSize="60"
-                Foreground="Black"
-                FontFamily="Times New Roman"
-                TextAlignment="Right"
-                Grid.Column="0"
-            >Email:</TextBlock>
-            <TextBlock
-                Grid.Row="1"
-                FontSize="60"
-                Foreground="Black"
-                FontFamily="Times New Roman"
-                TextAlignment="Right"
-                >Password:</TextBlock>
-            <TextBlock x:ConnectionId='2'
-                x:Name="vld_pass"
-                Grid.Row="1"
-                Grid.Column="2"
-                FontSize="60"
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Vertical">
+                <TextBox x:ConnectionId='3'
+                    Margin="0,0,0,0"
+                    x:Name="email"
+					FontSize="25"
+					Foreground="Black"
+                    PlaceholderText="Email"/>
+                <TextBlock x:ConnectionId='4'
+                    x:Name="emailErr"
+                    FontSize="20"
+                    Foreground="red"
+                    TextAlignment="Left">
+                </TextBlock>
+                <PasswordBox x:ConnectionId='5'
+                    x:Name="password"
+                    FontSize="25"
+                    PlaceholderText="Password"
+                    Foreground="Black"/>
+                <TextBlock x:ConnectionId='6'
+                x:Name="passwordErr"
+                FontSize="20"
                 Foreground="red"
-                FontFamily="Times New Roman"
-                TextAlignment="Center"
+                TextAlignment="Left"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='3'
-                x:Name="vld_email"
-                Grid.Row="0"
-                Grid.Column="2"
-                FontSize="60"
-                Foreground="red"
-                FontFamily="Times New Roman"
-                TextAlignment="Center"
-                ></TextBlock>
-            <TextBox x:ConnectionId='4'
-            x:Name="email"
-                Grid.Row="0"
-                Grid.Column="1"
-                FontSize="60"
-                PlaceholderText="Email"
-                ></TextBox>
-            <PasswordBox x:ConnectionId='5'
-            x:Name="password"
-                Grid.Row="1"
-                Grid.Column="1"
-                FontSize="60"
-                PlaceholderText="Password"
-                ></PasswordBox>
-            <Grid
-                Padding="0,0,0,0"
-                Grid.Row="2"
-                Grid.Column="1"
-                >
+                <StackPanel Orientation="Horizontal">
 
-                <Button x:ConnectionId='6'
-                        Grid.Column="0"
-                    Background="DeepSkyBlue"
-                    Margin="0,20,0,0"
-                    FontSize="60"
-                    FontFamily="Times New Roman"
-                    HorizontalAlignment="Left"
-                                         
-                >Login</Button>
-                <Button
-                        Grid.Column="0"
-                    Background="Red"
-                    Margin="0,20,0,0"
-                    FontSize="60"
-                    FontFamily="Times New Roman"
-                    HorizontalAlignment="Right"
-                        >Register</Button>
-            </Grid>
+                </StackPanel>
+                <Grid
+                    Padding="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button x:ConnectionId='7'
+                        Grid.Column="2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Background="Bisque"
+                        Margin="0,20,0,0"
+                        FontSize="25"
+                        FontFamily="Adobe Arabic"
+                                             >
+                        Sign In
+                    </Button>
+                    <TextBlock x:ConnectionId='8' Foreground="Black" FontFamily="Adobe Arabic" VerticalAlignment="Bottom" FontSize="15" Grid.Column="3"                                    >Don't have account?</TextBlock>
+                </Grid>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

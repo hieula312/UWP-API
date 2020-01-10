@@ -31,11 +31,41 @@
     <AppxPackagedFile Include="C:\Users\ADMIN\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\.nuget\packages\powerargs\3.6.0\lib\netstandard2.0\PowerArgs.dll">
+      <PackagePath>PowerArgs.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\.nuget\packages\sqlitepcl\3.8.7.2\lib\netcore451\SQLitePCL.dll">
+      <PackagePath>SQLitePCL.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.30.1\Redist\Debug\x86\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\.nuget\packages\sqlitepcl\3.8.7.2\build\netcore451\SQLitePCL.Ext.dll">
+      <PackagePath>SQLitePCL.Ext.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone2.jpg">
+      <PackagePath>Assets\img\headphone2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone3.jpg">
+      <PackagePath>Assets\img\headphone3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone4.jpg">
+      <PackagePath>Assets\img\headphone4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone5.jpg">
+      <PackagePath>Assets\img\headphone5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone6.jpg">
+      <PackagePath>Assets\img\headphone6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone7.jpg">
+      <PackagePath>Assets\img\headphone7.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -73,14 +103,29 @@
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\AppLayout.xbf">
+      <PackagePath>Pages\AppLayout.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\CameraDemo.xbf">
+      <PackagePath>Pages\CameraDemo.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\CreateSong.xbf">
+      <PackagePath>Pages\CreateSong.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\DemoFile.xbf">
+      <PackagePath>Pages\DemoFile.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\DetailInformation.xbf">
       <PackagePath>Pages\DetailInformation.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\LogIn.xbf">
       <PackagePath>Pages\LogIn.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\MyListSong.xbf">
+      <PackagePath>Pages\MyListSong.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\OurListSong.xbf">
+      <PackagePath>Pages\OurListSong.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\Register.xbf">
       <PackagePath>Pages\Register.xbf</PackagePath>

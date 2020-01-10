@@ -2,6 +2,30 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.17763": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.8]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.8]",
+          "Microsoft.NetCore.Analyzers": "[2.9.8]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.8]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
         "type": "package",
         "dependencies": {
@@ -24,6 +48,12 @@
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.0": {
@@ -203,6 +233,12 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "Microsoft.NetFramework.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -225,6 +261,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PowerArgs/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
@@ -315,9 +360,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLitePCL/3.8.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "build": {
+          "build/netcore451/SQLitePCL.props": {},
+          "build/netcore451/SQLitePCL.targets": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.8]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.8]",
+          "Microsoft.NetCore.Analyzers": "[2.9.8]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.8]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
         "type": "package",
         "dependencies": {
@@ -340,6 +422,12 @@
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.0": {
@@ -520,6 +608,12 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "Microsoft.NetFramework.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -542,6 +636,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PowerArgs/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
@@ -810,9 +913,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLitePCL/3.8.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "build": {
+          "build/netcore451/SQLitePCL.props": {},
+          "build/netcore451/SQLitePCL.targets": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm-aot": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.8]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.8]",
+          "Microsoft.NetCore.Analyzers": "[2.9.8]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.8]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
         "type": "package",
         "dependencies": {
@@ -835,6 +975,12 @@
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.0": {
@@ -1015,6 +1161,12 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "Microsoft.NetFramework.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -1037,6 +1189,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PowerArgs/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
         }
       },
       "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.9": {
@@ -1306,9 +1467,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLitePCL/3.8.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "build": {
+          "build/netcore451/SQLitePCL.props": {},
+          "build/netcore451/SQLitePCL.targets": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.8]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.8]",
+          "Microsoft.NetCore.Analyzers": "[2.9.8]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.8]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
         "type": "package",
         "dependencies": {
@@ -1331,6 +1529,12 @@
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.0": {
@@ -1511,6 +1715,12 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "Microsoft.NetFramework.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -1533,6 +1743,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PowerArgs/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
@@ -1802,9 +2021,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLitePCL/3.8.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "build": {
+          "build/netcore451/SQLitePCL.props": {},
+          "build/netcore451/SQLitePCL.targets": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.8]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.8]",
+          "Microsoft.NetCore.Analyzers": "[2.9.8]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.8]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
         "type": "package",
         "dependencies": {
@@ -1827,6 +2083,12 @@
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.0": {
@@ -2007,6 +2269,12 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "Microsoft.NetFramework.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -2029,6 +2297,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PowerArgs/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
@@ -2297,9 +2574,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLitePCL/3.8.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "build": {
+          "build/netcore451/SQLitePCL.props": {},
+          "build/netcore451/SQLitePCL.targets": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64-aot": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.8]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.8]",
+          "Microsoft.NetCore.Analyzers": "[2.9.8]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.8]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
         "type": "package",
         "dependencies": {
@@ -2322,6 +2636,12 @@
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.0": {
@@ -2502,6 +2822,12 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "Microsoft.NetFramework.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -2524,6 +2850,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PowerArgs/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
@@ -2793,9 +3128,46 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLitePCL/3.8.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "build": {
+          "build/netcore451/SQLitePCL.props": {},
+          "build/netcore451/SQLitePCL.targets": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.8]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.8]",
+          "Microsoft.NetCore.Analyzers": "[2.9.8]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.8]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
         "type": "package",
         "dependencies": {
@@ -2818,6 +3190,12 @@
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.0": {
@@ -2998,6 +3376,12 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "Microsoft.NetFramework.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -3020,6 +3404,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PowerArgs/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
@@ -3288,9 +3681,46 @@
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
+      },
+      "SQLitePCL/3.8.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "build": {
+          "build/netcore451/SQLitePCL.props": {},
+          "build/netcore451/SQLitePCL.targets": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86-aot": {
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.VersionCheckAnalyzer": "[2.9.8]",
+          "Microsoft.CodeQuality.Analyzers": "[2.9.8]",
+          "Microsoft.NetCore.Analyzers": "[2.9.8]",
+          "Microsoft.NetFramework.Analyzers": "[2.9.8]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
         "type": "package",
         "dependencies": {
@@ -3313,6 +3743,12 @@
         },
         "build": {
           "build/Microsoft.Net.UWPCoreRuntimeSdk.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.0": {
@@ -3493,6 +3929,12 @@
           "build/Microsoft.NetCore.UniversalWindowsPlatform.targets": {}
         }
       },
+      "Microsoft.NetFramework.Analyzers/2.9.8": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -3515,6 +3957,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PowerArgs/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PowerArgs.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
@@ -3784,10 +4235,256 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLitePCL/3.8.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/SQLitePCL.dll": {}
+        },
+        "build": {
+          "build/netcore451/SQLitePCL.props": {},
+          "build/netcore451/SQLitePCL.targets": {}
+        }
       }
     }
   },
   "libraries": {
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
+      "sha512": "FZhO7S+xinFrcRvPyIxPbFgY0Jg3X+KNkawhg7wwoVxnT/ySdoO162dyIMXfQQ6/qCmjNFHmTDXiNlpPNvKNyQ==",
+      "type": "package",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.rtf",
+        "ThirdPartyNotices.rtf",
+        "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props",
+        "documentation/Analyzer Configuration.md",
+        "documentation/Microsoft.CodeAnalysis.FxCopAnalyzers.md",
+        "documentation/Microsoft.CodeAnalysis.FxCopAnalyzers.sarif",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/DesignRulesDefault/.editorconfig",
+        "editorconfig/DesignRulesEnabled/.editorconfig",
+        "editorconfig/DocumentationRulesDefault/.editorconfig",
+        "editorconfig/DocumentationRulesEnabled/.editorconfig",
+        "editorconfig/GlobalizationRulesDefault/.editorconfig",
+        "editorconfig/GlobalizationRulesEnabled/.editorconfig",
+        "editorconfig/InteroperabilityRulesDefault/.editorconfig",
+        "editorconfig/InteroperabilityRulesEnabled/.editorconfig",
+        "editorconfig/MaintainabilityRulesDefault/.editorconfig",
+        "editorconfig/MaintainabilityRulesEnabled/.editorconfig",
+        "editorconfig/NamingRulesDefault/.editorconfig",
+        "editorconfig/NamingRulesEnabled/.editorconfig",
+        "editorconfig/PerformanceRulesDefault/.editorconfig",
+        "editorconfig/PerformanceRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/ReliabilityRulesDefault/.editorconfig",
+        "editorconfig/ReliabilityRulesEnabled/.editorconfig",
+        "editorconfig/SecurityRulesDefault/.editorconfig",
+        "editorconfig/SecurityRulesEnabled/.editorconfig",
+        "editorconfig/UsageRulesDefault/.editorconfig",
+        "editorconfig/UsageRulesEnabled/.editorconfig",
+        "microsoft.codeanalysis.fxcopanalyzers.2.9.8.nupkg.sha512",
+        "microsoft.codeanalysis.fxcopanalyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DataflowRulesDefault.ruleset",
+        "rulesets/DataflowRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/DocumentationRulesDefault.ruleset",
+        "rulesets/DocumentationRulesEnabled.ruleset",
+        "rulesets/GlobalizationRulesDefault.ruleset",
+        "rulesets/GlobalizationRulesEnabled.ruleset",
+        "rulesets/InteroperabilityRulesDefault.ruleset",
+        "rulesets/InteroperabilityRulesEnabled.ruleset",
+        "rulesets/MaintainabilityRulesDefault.ruleset",
+        "rulesets/MaintainabilityRulesEnabled.ruleset",
+        "rulesets/NamingRulesDefault.ruleset",
+        "rulesets/NamingRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/PortedFromFxCopRulesDefault.ruleset",
+        "rulesets/PortedFromFxCopRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "rulesets/legacy/AllRules.ruleset",
+        "rulesets/legacy/BasicCorrectnessRules.ruleset",
+        "rulesets/legacy/BasicDesignGuidelineRules.ruleset",
+        "rulesets/legacy/ExtendedCorrectnessRules.ruleset",
+        "rulesets/legacy/ExtendedDesignGuidelineRules.ruleset",
+        "rulesets/legacy/GlobalizationRules.ruleset",
+        "rulesets/legacy/ManagedMinimumRules.ruleset",
+        "rulesets/legacy/MinimumRecommendedRules.ruleset",
+        "rulesets/legacy/SecurityRules.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
+      "sha512": "iSjqkECKpagJPjzc7sMjD6rQWSznVYqTfUZ96yR0r0jDzA45TymBof350tlOfGDRvn4OrU/KKJav21/oZDttrA==",
+      "type": "package",
+      "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.rtf",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/de/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/es/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/fr/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/it/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/ja/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/ko/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/pl/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/pt-BR/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/ru/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/tr/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/zh-Hans/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "analyzers/dotnet/zh-Hant/Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll",
+        "build/Microsoft.CodeAnalysis.VersionCheckAnalyzer.props",
+        "documentation/Analyzer Configuration.md",
+        "documentation/Microsoft.CodeAnalysis.VersionCheckAnalyzer.md",
+        "documentation/Microsoft.CodeAnalysis.VersionCheckAnalyzer.sarif",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/ReliabilityRulesDefault/.editorconfig",
+        "editorconfig/ReliabilityRulesEnabled/.editorconfig",
+        "microsoft.codeanalysis.versioncheckanalyzer.2.9.8.nupkg.sha512",
+        "microsoft.codeanalysis.versioncheckanalyzer.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DataflowRulesDefault.ruleset",
+        "rulesets/DataflowRulesEnabled.ruleset",
+        "rulesets/PortedFromFxCopRulesDefault.ruleset",
+        "rulesets/PortedFromFxCopRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.CodeQuality.Analyzers/2.9.8": {
+      "sha512": "KevAiJKuolGKK84jDHMVGJjBAigH/86xyCVtbOzh5avUYzW7jPErdJW708byKKMiVKTwv027mbKCNnnOgNQHsA==",
+      "type": "package",
+      "path": "microsoft.codequality.analyzers/2.9.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.rtf",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Humanizer.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeQuality.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeQuality.CSharp.Analyzers.dll",
+        "analyzers/dotnet/cs/cs/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/de/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/es/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/fr/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/it/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ja/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ko/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pl/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ru/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/tr/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/zh-Hans/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/zh-Hant/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/Humanizer.dll",
+        "analyzers/dotnet/vb/Microsoft.CodeQuality.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.CodeQuality.VisualBasic.Analyzers.dll",
+        "analyzers/dotnet/vb/cs/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/de/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/es/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/fr/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/it/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ja/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ko/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/pl/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/pt-BR/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ru/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/tr/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/zh-Hans/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/zh-Hant/Microsoft.CodeQuality.Analyzers.resources.dll",
+        "build/Microsoft.CodeQuality.Analyzers.props",
+        "documentation/Analyzer Configuration.md",
+        "documentation/Microsoft.CodeQuality.Analyzers.md",
+        "documentation/Microsoft.CodeQuality.Analyzers.sarif",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/DesignRulesDefault/.editorconfig",
+        "editorconfig/DesignRulesEnabled/.editorconfig",
+        "editorconfig/DocumentationRulesDefault/.editorconfig",
+        "editorconfig/DocumentationRulesEnabled/.editorconfig",
+        "editorconfig/MaintainabilityRulesDefault/.editorconfig",
+        "editorconfig/MaintainabilityRulesEnabled/.editorconfig",
+        "editorconfig/NamingRulesDefault/.editorconfig",
+        "editorconfig/NamingRulesEnabled/.editorconfig",
+        "editorconfig/PerformanceRulesDefault/.editorconfig",
+        "editorconfig/PerformanceRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/ReliabilityRulesDefault/.editorconfig",
+        "editorconfig/ReliabilityRulesEnabled/.editorconfig",
+        "editorconfig/SecurityRulesDefault/.editorconfig",
+        "editorconfig/SecurityRulesEnabled/.editorconfig",
+        "editorconfig/UsageRulesDefault/.editorconfig",
+        "editorconfig/UsageRulesEnabled/.editorconfig",
+        "microsoft.codequality.analyzers.2.9.8.nupkg.sha512",
+        "microsoft.codequality.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DataflowRulesDefault.ruleset",
+        "rulesets/DataflowRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/DocumentationRulesDefault.ruleset",
+        "rulesets/DocumentationRulesEnabled.ruleset",
+        "rulesets/MaintainabilityRulesDefault.ruleset",
+        "rulesets/MaintainabilityRulesEnabled.ruleset",
+        "rulesets/NamingRulesDefault.ruleset",
+        "rulesets/NamingRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/PortedFromFxCopRulesDefault.ruleset",
+        "rulesets/PortedFromFxCopRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Microsoft.Net.Native.Compiler/2.2.7-rel-27913-00": {
       "sha512": "o+Op8dwxI29v3F2RwgPI5z9r1LAOn8HxAbgmgRi2mppC7KEDgkhv9GvsWM3E7bdYTam0GT7IPM4Nww/wVBiS8A==",
       "type": "package",
@@ -3859,6 +4556,94 @@
         "tools/CoreRuntime/Microsoft.Cci.dll",
         "tools/CoreRuntime/Microsoft.Net.CoreRuntime.settings.targets",
         "tools/CoreRuntime/Microsoft.Net.CoreRuntime.targets"
+      ]
+    },
+    "Microsoft.NetCore.Analyzers/2.9.8": {
+      "sha512": "zbGttCZ8T5wJiBDhgIaFWTrYa/X7zbCnQ76PEu/B4gb64KY+yB9gjkndsKWR+2TbOId76PN7WrSQAn+W7gr5jQ==",
+      "type": "package",
+      "path": "microsoft.netcore.analyzers/2.9.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.rtf",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Microsoft.NetCore.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.NetCore.CSharp.Analyzers.dll",
+        "analyzers/dotnet/cs/cs/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/de/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/es/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/fr/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/it/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ja/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ko/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pl/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ru/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/tr/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/zh-Hans/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/zh-Hant/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/Microsoft.NetCore.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetCore.VisualBasic.Analyzers.dll",
+        "analyzers/dotnet/vb/cs/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/de/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/es/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/fr/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/it/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ja/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ko/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/pl/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/pt-BR/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ru/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/tr/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/zh-Hans/Microsoft.NetCore.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/zh-Hant/Microsoft.NetCore.Analyzers.resources.dll",
+        "build/Microsoft.NetCore.Analyzers.props",
+        "documentation/Analyzer Configuration.md",
+        "documentation/Microsoft.NetCore.Analyzers.md",
+        "documentation/Microsoft.NetCore.Analyzers.sarif",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/GlobalizationRulesDefault/.editorconfig",
+        "editorconfig/GlobalizationRulesEnabled/.editorconfig",
+        "editorconfig/InteroperabilityRulesDefault/.editorconfig",
+        "editorconfig/InteroperabilityRulesEnabled/.editorconfig",
+        "editorconfig/PerformanceRulesDefault/.editorconfig",
+        "editorconfig/PerformanceRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/ReliabilityRulesDefault/.editorconfig",
+        "editorconfig/ReliabilityRulesEnabled/.editorconfig",
+        "editorconfig/SecurityRulesDefault/.editorconfig",
+        "editorconfig/SecurityRulesEnabled/.editorconfig",
+        "editorconfig/UsageRulesDefault/.editorconfig",
+        "editorconfig/UsageRulesEnabled/.editorconfig",
+        "microsoft.netcore.analyzers.2.9.8.nupkg.sha512",
+        "microsoft.netcore.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DataflowRulesDefault.ruleset",
+        "rulesets/DataflowRulesEnabled.ruleset",
+        "rulesets/GlobalizationRulesDefault.ruleset",
+        "rulesets/GlobalizationRulesEnabled.ruleset",
+        "rulesets/InteroperabilityRulesDefault.ruleset",
+        "rulesets/InteroperabilityRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/PortedFromFxCopRulesDefault.ruleset",
+        "rulesets/PortedFromFxCopRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
@@ -4169,6 +4954,78 @@
         "runtime.json"
       ]
     },
+    "Microsoft.NetFramework.Analyzers/2.9.8": {
+      "sha512": "8fZYJqeKBW5uuKBact26IeOBogchn5Km85klHqHneRY7Jxp+ERtrw8zJVumNFUVL68pIcf4uKPOY7zfBQ7eY3A==",
+      "type": "package",
+      "path": "microsoft.netframework.analyzers/2.9.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.rtf",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Microsoft.NetFramework.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.NetFramework.CSharp.Analyzers.dll",
+        "analyzers/dotnet/cs/cs/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/de/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/es/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/fr/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/it/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ja/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ko/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pl/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ru/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/tr/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/zh-Hans/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/zh-Hant/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/Microsoft.NetFramework.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetFramework.VisualBasic.Analyzers.dll",
+        "analyzers/dotnet/vb/cs/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/de/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/es/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/fr/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/it/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ja/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ko/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/pl/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/pt-BR/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/ru/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/tr/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/zh-Hans/Microsoft.NetFramework.Analyzers.resources.dll",
+        "analyzers/dotnet/vb/zh-Hant/Microsoft.NetFramework.Analyzers.resources.dll",
+        "build/Microsoft.NetFramework.Analyzers.props",
+        "documentation/Analyzer Configuration.md",
+        "documentation/Microsoft.NetFramework.Analyzers.md",
+        "documentation/Microsoft.NetFramework.Analyzers.sarif",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/DesignRulesDefault/.editorconfig",
+        "editorconfig/DesignRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "editorconfig/SecurityRulesDefault/.editorconfig",
+        "editorconfig/SecurityRulesEnabled/.editorconfig",
+        "microsoft.netframework.analyzers.2.9.8.nupkg.sha512",
+        "microsoft.netframework.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DataflowRulesDefault.ruleset",
+        "rulesets/DataflowRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/PortedFromFxCopRulesDefault.ruleset",
+        "rulesets/PortedFromFxCopRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "NETStandard.Library/2.0.3": {
       "sha512": "548M6mnBSJWxsIlkQHfbzoYxpiYFXZZSL00p4GHYv8PkiqFBnnT68mW5mGEsA/ch9fDO9GkPgkFQpWiXZN7mAQ==",
       "type": "package",
@@ -4327,6 +5184,19 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "PowerArgs/3.6.0": {
+      "sha512": "ooaQtI6nLOMNQoNfuiEcM1lnPJ9mBaXF99pt1EHnupwqZtC+L5I7IeSjZ/RA+h6Z2DImdFtWn9PNHbhcL9qNKA==",
+      "type": "package",
+      "path": "powerargs/3.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/PowerArgs.dll",
+        "lib/netstandard2.0/PowerArgs.xml",
+        "powerargs.3.6.0.nupkg.sha512",
+        "powerargs.nuspec"
       ]
     },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.9": {
@@ -8246,12 +9116,95 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
+    },
+    "SQLitePCL/3.8.7.2": {
+      "sha512": "Vi2/IJKPV4Web9GX+wn42foALVjFM68uTEoIOY6Ir8keF5OkniMB/iXCg3N2GWgj5ex7dCAsJmhv1sX84Fj9dQ==",
+      "type": "package",
+      "path": "sqlitepcl/3.8.7.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid/_._",
+        "build/MonoTouch/_._",
+        "build/Xamarin.iOS10/_._",
+        "build/net45/SQLitePCL.Ext.dll",
+        "build/net45/SQLitePCL.props",
+        "build/net45/SQLitePCL.targets",
+        "build/netcore45/SQLitePCL.Ext.dll",
+        "build/netcore45/SQLitePCL.Ext.pri",
+        "build/netcore45/SQLitePCL.props",
+        "build/netcore45/SQLitePCL.targets",
+        "build/netcore451/SQLitePCL.Ext.dll",
+        "build/netcore451/SQLitePCL.Ext.pri",
+        "build/netcore451/SQLitePCL.props",
+        "build/netcore451/SQLitePCL.targets",
+        "build/portable-net45+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/_._",
+        "build/wp8/ARM/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.dll",
+        "build/wp8/ARM/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.winmd",
+        "build/wp8/ARM/SQLitePCL.Ext.dll",
+        "build/wp8/SQLitePCL.props",
+        "build/wp8/SQLitePCL.targets",
+        "build/wp8/x86/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.dll",
+        "build/wp8/x86/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.winmd",
+        "build/wp8/x86/SQLitePCL.Ext.dll",
+        "build/wp81/ARM/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.dll",
+        "build/wp81/ARM/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.winmd",
+        "build/wp81/ARM/SQLitePCL.Ext.dll",
+        "build/wp81/SQLitePCL.props",
+        "build/wp81/SQLitePCL.targets",
+        "build/wp81/x86/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.dll",
+        "build/wp81/x86/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.winmd",
+        "build/wp81/x86/SQLitePCL.Ext.dll",
+        "build/wpa81/SQLitePCL.Ext.dll",
+        "build/wpa81/SQLitePCL.Ext.pri",
+        "build/wpa81/SQLitePCL.props",
+        "build/wpa81/SQLitePCL.targets",
+        "lib/MonoAndroid/SQLitePCL.Ext.dll",
+        "lib/MonoAndroid/SQLitePCL.dll",
+        "lib/MonoTouch/SQLitePCL.Ext.dll",
+        "lib/MonoTouch/SQLitePCL.dll",
+        "lib/Xamarin.iOS10/SQLitePCL.Ext.dll",
+        "lib/Xamarin.iOS10/SQLitePCL.dll",
+        "lib/net45/SQLitePCL.dll",
+        "lib/netcore45/SQLitePCL.dll",
+        "lib/netcore451/SQLitePCL.dll",
+        "lib/portable-net45+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/SQLitePCL.dll",
+        "lib/wp8/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.dll",
+        "lib/wp8/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.winmd",
+        "lib/wp8/SQLitePCL.dll",
+        "lib/wp81/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.dll",
+        "lib/wp81/SQLitePCL.Ext.WindowsPhone8.RuntimeProxy.winmd",
+        "lib/wp81/SQLitePCL.dll",
+        "lib/wpa81/SQLitePCL.dll",
+        "readme.txt",
+        "sqlitepcl.3.8.7.2.nupkg.sha512",
+        "sqlitepcl.nuspec",
+        "tools/MonoAndroid/install.ps1",
+        "tools/MonoTouch/install.ps1",
+        "tools/Xamarin.iOS10/install.ps1",
+        "tools/net45/install.ps1",
+        "tools/netcore45/install.ps1",
+        "tools/netcore45/uninstall.ps1",
+        "tools/netcore451/install.ps1",
+        "tools/netcore451/uninstall.ps1",
+        "tools/portable-net45+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/install.ps1",
+        "tools/wp8/install.ps1",
+        "tools/wp8/uninstall.ps1",
+        "tools/wp81/install.ps1",
+        "tools/wp81/uninstall.ps1",
+        "tools/wpa81/install.ps1",
+        "tools/wpa81/uninstall.ps1"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
+      "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.8",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.9",
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "PowerArgs >= 3.6.0",
+      "SQLitePCL >= 3.8.7.2"
     ]
   },
   "packageFolders": {
@@ -8291,6 +9244,12 @@
     "frameworks": {
       "uap10.0.17763": {
         "dependencies": {
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.9.8, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.9, )"
@@ -8298,6 +9257,14 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "PowerArgs": {
+            "target": "Package",
+            "version": "[3.6.0, )"
+          },
+          "SQLitePCL": {
+            "target": "Package",
+            "version": "[3.8.7.2, )"
           }
         },
         "imports": [
