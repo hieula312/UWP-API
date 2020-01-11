@@ -16,7 +16,7 @@ namespace UWP_API.Services
             return await FileIO.ReadTextAsync(sampleFile);
         }
 
-        public static async void WriteToFile(string fileName, string content)
+        public static async Task WriteToFile(string fileName, string content)
         {
             var storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             var sampleFile = await storageFolder.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.ReplaceExisting);

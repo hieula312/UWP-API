@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:ConnectionId='2' x:Name="main">
+    <Grid>
         <Grid.Background>
             <ImageBrush
                 Stretch="UniformToFill"
@@ -43,25 +43,25 @@
             <StackPanel
                 Grid.Column="1"
                 Orientation="Vertical">
-                <TextBox x:ConnectionId='3'
+                <TextBox x:ConnectionId='2'
                     Margin="0,0,0,0"
                     x:Name="email"
 					FontSize="25"
 					Foreground="DimGray"
                     PlaceholderText="Email"/>
-                <TextBlock x:ConnectionId='4'
+                <TextBlock x:ConnectionId='3'
                     Margin="0,0,0,5"
                     x:Name="emailErr"
                     FontSize="20"
                     Foreground="#f0a461"
                     TextAlignment="Left">
                 </TextBlock>
-                <PasswordBox x:ConnectionId='5'
+                <PasswordBox x:ConnectionId='4'
                     x:Name="password"
                     FontSize="25"
                     PlaceholderText="Password"
                     Foreground="DimGray"/>
-                <TextBlock x:ConnectionId='6'
+                <TextBlock x:ConnectionId='5'
                 Margin="0,0,0,5"
                 x:Name="passwordErr"
                 FontSize="20"
@@ -80,7 +80,7 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button x:ConnectionId='7'
+                    <Button x:ConnectionId='6'
                         Grid.Column="2"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
@@ -92,7 +92,7 @@
                         Enjoy now
                     </Button>
                     <TextBlock Foreground="DimGray"  VerticalAlignment="Bottom" FontSize="15" Grid.Column="3" >
-                        <Hyperlink x:ConnectionId='8' Foreground="DimGray"                           >
+                        <Hyperlink x:ConnectionId='7' Foreground="DimGray"                           >
                             Don't have account?
                         </Hyperlink>
                     </TextBlock>

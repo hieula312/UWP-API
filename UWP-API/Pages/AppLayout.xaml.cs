@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -48,6 +49,19 @@ namespace UWP_API.Pages
     ("ourList", typeof(Pages.OurListSong)),
     ("logOut", typeof(Pages.LogIn)),
 };
+
+        private async void movePage()
+        {
+            var tokenFile = await ApplicationData.Current.LocalFolder.TryGetItemAsync("token.txt");
+            if (tokenFile != null)
+            {
+                NavView_Navigate("myList", new EntranceNavigationTransitionInfo());
+            }
+            else
+            {
+                NavView_Navigate("signIn", new EntranceNavigationTransitionInfo());
+            }
+        }
         public async void checkToken()
         {
             var tokenFile = await ApplicationData.Current.LocalFolder.TryGetItemAsync("token.txt");
@@ -56,16 +70,24 @@ namespace UWP_API.Pages
                 LogIn.Token = await FileHandleService.ReadFile("token.txt");
                 LogOut.Visibility = Visibility.Visible;
                 SignIn.Visibility = Visibility.Collapsed;
+                signUp.Visibility = Visibility.Collapsed;
+                myListSongObj.IsEnabled = true;
+                ourListSongObj.IsEnabled = true;
+                createSongObj.IsEnabled = true;
             }
             else
             {
                 LogIn.Token = null;
+                myListSongObj.IsEnabled = false;
+                ourListSongObj.IsEnabled = false;
+                createSongObj.IsEnabled = false;
                 SignIn.Visibility = Visibility.Visible;
                 LogOut.Visibility = Visibility.Collapsed;
+                signUp.Visibility = Visibility.Visible;
             }
         }
 
-        private void NavView_Loaded(object sender, RoutedEventArgs e)
+        private async void NavView_Loaded(object sender, RoutedEventArgs e)
         {
             // Add handler for ContentFrame navigation.
             ContentFrame.Navigated += On_Navigated;
@@ -75,15 +97,7 @@ namespace UWP_API.Pages
             // If navigation occurs on SelectionChanged, this isn't needed.
             // Because we use ItemInvoked to navigate, we need to call Navigate
             // here to load the home page.
-            checkToken();
-            if (LogIn.Token != null)
-            {
-                NavView_Navigate("myList", new EntranceNavigationTransitionInfo());
-            }
-            else
-            {
-                NavView_Navigate("signIn", new EntranceNavigationTransitionInfo());
-            }
+           
             // Add keyboard accelerators for backwards navigation.
             var goBack = new KeyboardAccelerator { Key = VirtualKey.GoBack };
             goBack.Invoked += BackInvoked;
@@ -96,8 +110,10 @@ namespace UWP_API.Pages
                 Modifiers = VirtualKeyModifiers.Menu
             };
             altLeft.Invoked += BackInvoked;
-            this.KeyboardAccelerators.Add(altLeft);
+            this.KeyboardAccelerators.Add(altLeft); 
             checkToken();
+            movePage();
+            
         }
 
         private void NavView_ItemInvoked(NavigationView sender,
@@ -111,14 +127,6 @@ namespace UWP_API.Pages
             {
                 var navItemTag = args.InvokedItemContainer.Tag.ToString();
                 NavView_Navigate(navItemTag, args.RecommendedNavigationTransitionInfo);
-                if (navItemTag.Equals("myList") || navItemTag.Equals("ourList") || navItemTag.Equals("createSong"))
-                {
-                    if (LogIn.Token == null)
-                    {
-                        NavView_Navigate("signIn", new EntranceNavigationTransitionInfo());
-                    }
-                }
-                if (LogIn.Token == null)
                 if (navItemTag.Equals("logOut"))
                 {
                     LogOutFunction();

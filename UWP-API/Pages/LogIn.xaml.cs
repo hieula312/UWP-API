@@ -53,10 +53,10 @@ namespace UWP_API.Pages
             {
                 Token = await _service.GetToken(email, password);
                 LogIn.Token = Token;
-                FileHandleService.WriteToFile("token.txt", Token);
+                await FileHandleService.WriteToFile("token.txt", Token);
+                AppLayout.currentLayout.checkToken();
                 this.Frame.Navigate(typeof(MyListSong));
             }
-            Debug.WriteLine(Token);
         }
 
         private void Sanitize_ErrBlock()

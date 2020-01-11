@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-01-11T06:33:30.689</Modified>
+      <Modified>2020-01-11T11:10:26.629</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\UWP-API.exe">
       <PackagePath>entrypoint\UWP-API.exe</PackagePath>
-      <Modified>2020-01-11T06:33:30.064</Modified>
+      <Modified>2020-01-11T11:10:25.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -65,50 +65,6 @@
     <AppxPackagedFile Include="C:\Users\ADMIN\.nuget\packages\sqlitepcl\3.8.7.2\build\netcore451\SQLitePCL.Ext.dll">
       <PackagePath>SQLitePCL.Ext.dll</PackagePath>
       <Modified>2014-12-09T04:04:52.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone2.jpg">
-      <PackagePath>Assets\img\headphone2.jpg</PackagePath>
-      <Modified>2020-01-09T12:36:27.720</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone3.jpg">
-      <PackagePath>Assets\img\headphone3.jpg</PackagePath>
-      <Modified>2020-01-09T12:36:27.723</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone4.jpg">
-      <PackagePath>Assets\img\headphone4.jpg</PackagePath>
-      <Modified>2020-01-09T12:36:27.729</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone5.jpg">
-      <PackagePath>Assets\img\headphone5.jpg</PackagePath>
-      <Modified>2020-01-09T12:36:27.733</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone6.jpg">
-      <PackagePath>Assets\img\headphone6.jpg</PackagePath>
-      <Modified>2020-01-09T12:36:27.736</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone7.jpg">
-      <PackagePath>Assets\img\headphone7.jpg</PackagePath>
-      <Modified>2020-01-09T12:36:27.740</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img1.jpg">
-      <PackagePath>Assets\img\img1.jpg</PackagePath>
-      <Modified>2020-01-11T05:01:17.616</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img2.jpg">
-      <PackagePath>Assets\img\img2.jpg</PackagePath>
-      <Modified>2020-01-11T05:01:17.621</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img3.jpg">
-      <PackagePath>Assets\img\img3.jpg</PackagePath>
-      <Modified>2020-01-11T05:01:17.624</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img4.jpg">
-      <PackagePath>Assets\img\img4.jpg</PackagePath>
-      <Modified>2020-01-11T05:05:57.415</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img5.jpg">
-      <PackagePath>Assets\img\img5.jpg</PackagePath>
-      <Modified>2020-01-11T05:05:57.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img6.jpg">
       <PackagePath>Assets\img\img6.jpg</PackagePath>
@@ -154,47 +110,47 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\UWP-API.xr.xml">
       <PackagePath>UWP-API.xr.xml</PackagePath>
-      <Modified>2020-01-11T06:33:29.254</Modified>
+      <Modified>2020-01-11T10:41:37.409</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.229</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\AppLayout.xbf">
       <PackagePath>Pages\AppLayout.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.229</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\CameraDemo.xbf">
       <PackagePath>Pages\CameraDemo.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.229</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\CreateSong.xbf">
       <PackagePath>Pages\CreateSong.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.229</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\DemoFile.xbf">
       <PackagePath>Pages\DemoFile.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.229</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\DetailInformation.xbf">
       <PackagePath>Pages\DetailInformation.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.230</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\LogIn.xbf">
       <PackagePath>Pages\LogIn.xbf</PackagePath>
-      <Modified>2020-01-11T06:33:29.264</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\MyListSong.xbf">
       <PackagePath>Pages\MyListSong.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.230</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\OurListSong.xbf">
       <PackagePath>Pages\OurListSong.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.230</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Pages\Register.xbf">
       <PackagePath>Pages\Register.xbf</PackagePath>
-      <Modified>2020-01-11T06:32:44.230</Modified>
+      <Modified>2020-01-11T11:10:24.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -202,11 +158,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-01-11T05:59:10.014</Modified>
+      <Modified>2020-01-11T09:41:28.252</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\bin\x86\Debug\Core\UWP-API.exe">
       <PackagePath>UWP-API.exe</PackagePath>
-      <Modified>2020-01-11T06:33:30.682</Modified>
+      <Modified>2020-01-11T11:10:26.619</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

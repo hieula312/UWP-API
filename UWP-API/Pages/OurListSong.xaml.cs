@@ -81,7 +81,16 @@ namespace UWP_API.Pages
 
         private void Previous_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            var currentIndex = Songs.SelectedIndex;
+            currentIndex--;
+            if (currentIndex < 0)
+            {
+                currentIndex = Songs.Items.Count - 1;
+            }
+            currentSong = Songs.Items[currentIndex] as Song;
+            Songs.SelectedIndex = currentIndex;
+            MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
+            When_Pause();
         }
 
         private void When_Play()

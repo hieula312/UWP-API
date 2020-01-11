@@ -13,18 +13,25 @@
         <NavigationView x:Name="NavView"
                          Loaded="NavView_Loaded"
                          ItemInvoked="NavView_ItemInvoked"
-                         BackRequested="NavView_BackRequested">
+                         BackRequested="NavView_BackRequested"
+                         
+                         FontSize="80"
+                         PaneTitle="MUSIC TOWN"
+                         IsBackButtonVisible="Collapsed" 
+                         CompactPaneLength="0"
+                         
+                         >
             <NavigationView.MenuItems>
                 <NavigationViewItemHeader x:Name="MainPagesHeader" Content="MENU"/>
-                <NavigationViewItem x:Name="SignIn" Tag="signIn" Content="Sign In" Icon="NewWindow"/>
-                <NavigationViewItem Tag="signUp" Content="Register">
+                <NavigationViewItem Visibility="Collapsed" x:Name="SignIn" Tag="signIn" Content="Sign In" Icon="NewWindow"/>
+                <NavigationViewItem  Visibility="Collapsed" x:Name="signUp" Tag="signUp" Content="Register">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="myList" Icon="Audio" Content="My List Song"/>
-                <NavigationViewItem Tag="ourList" Icon="Audio" Content="Our List Song"/>
-                <NavigationViewItem Tag="createSong" Icon="Add" Content="Create Song"/>
+                <NavigationViewItem x:Name="myListSongObj" IsEnabled="True" Tag="myList" Icon="Audio" Content="My List Song"/>
+                <NavigationViewItem x:Name="ourListSongObj" IsEnabled="True" Tag="ourList" Icon="Audio" Content="Our List Song"/>
+                <NavigationViewItem x:Name="createSongObj" IsEnabled="True" Tag="createSong" Icon="Add" Content="Create Song"/>
                 <NavigationViewItem x:Name="LogOut" Tag="logOut"  Icon="Add" Content="Log out"/>
             </NavigationView.MenuItems>
             <NavigationView.AutoSuggestBox>
@@ -34,7 +41,7 @@
             </NavigationView.AutoSuggestBox>
 
             <ScrollViewer>
-                <Frame x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
+                <Frame x:Name="ContentFrame" Padding="0,0,0,0" IsTabStop="True"
                    NavigationFailed="ContentFrame_NavigationFailed"/>
             </ScrollViewer>
         </NavigationView>

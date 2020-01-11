@@ -164,17 +164,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\img\headphone2.jpg" />
-    <Content Include="Assets\img\headphone3.jpg" />
-    <Content Include="Assets\img\headphone4.jpg" />
-    <Content Include="Assets\img\headphone5.jpg" />
-    <Content Include="Assets\img\headphone6.jpg" />
-    <Content Include="Assets\img\headphone7.jpg" />
-    <Content Include="Assets\img\img1.jpg" />
-    <Content Include="Assets\img\img2.jpg" />
-    <Content Include="Assets\img\img3.jpg" />
-    <Content Include="Assets\img\img4.jpg" />
-    <Content Include="Assets\img\img5.jpg" />
     <Content Include="Assets\img\img6.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

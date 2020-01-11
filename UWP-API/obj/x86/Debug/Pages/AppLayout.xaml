@@ -13,28 +13,35 @@
         <NavigationView x:ConnectionId='2' x:Name="NavView"
                                                 
                                                           
-                                                              >
+                                                              
+                         
+                         FontSize="80"
+                         PaneTitle="MUSIC TOWN"
+                         IsBackButtonVisible="Collapsed" 
+                         CompactPaneLength="0"
+                         
+                         >
             <NavigationView.MenuItems>
                 <NavigationViewItemHeader x:ConnectionId='3' x:Name="MainPagesHeader" Content="MENU"/>
-                <NavigationViewItem x:ConnectionId='4' x:Name="SignIn" Tag="signIn" Content="Sign In" Icon="NewWindow"/>
-                <NavigationViewItem Tag="signUp" Content="Register">
+                <NavigationViewItem x:ConnectionId='4' Visibility="Collapsed" x:Name="SignIn" Tag="signIn" Content="Sign In" Icon="NewWindow"/>
+                <NavigationViewItem x:ConnectionId='5'  Visibility="Collapsed" x:Name="signUp" Tag="signUp" Content="Register">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="myList" Icon="Audio" Content="My List Song"/>
-                <NavigationViewItem Tag="ourList" Icon="Audio" Content="Our List Song"/>
-                <NavigationViewItem Tag="createSong" Icon="Add" Content="Create Song"/>
-                <NavigationViewItem x:ConnectionId='5' x:Name="LogOut" Tag="logOut"  Icon="Add" Content="Log out"/>
+                <NavigationViewItem x:ConnectionId='6' x:Name="myListSongObj" IsEnabled="True" Tag="myList" Icon="Audio" Content="My List Song"/>
+                <NavigationViewItem x:ConnectionId='7' x:Name="ourListSongObj" IsEnabled="True" Tag="ourList" Icon="Audio" Content="Our List Song"/>
+                <NavigationViewItem x:ConnectionId='8' x:Name="createSongObj" IsEnabled="True" Tag="createSong" Icon="Add" Content="Create Song"/>
+                <NavigationViewItem x:ConnectionId='9' x:Name="LogOut" Tag="logOut"  Icon="Add" Content="Log out"/>
             </NavigationView.MenuItems>
             <NavigationView.AutoSuggestBox>
                 <!-- See AutoSuggestBox documentation for
                  more info about how to implement search. -->
-                <AutoSuggestBox x:ConnectionId='6' x:Name="NavViewSearchBox" QueryIcon="Find"/>
+                <AutoSuggestBox x:ConnectionId='10' x:Name="NavViewSearchBox" QueryIcon="Find"/>
             </NavigationView.AutoSuggestBox>
 
             <ScrollViewer>
-                <Frame x:ConnectionId='7' x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
+                <Frame x:ConnectionId='11' x:Name="ContentFrame" Padding="0,0,0,0" IsTabStop="True"
                                                                    />
             </ScrollViewer>
         </NavigationView>
@@ -43,7 +50,7 @@
             <VisualStateGroup>
                 <VisualState>
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger x:ConnectionId='8'
+                        <AdaptiveTrigger x:ConnectionId='12'
                                                                                    />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>

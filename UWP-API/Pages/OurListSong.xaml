@@ -47,7 +47,7 @@
             </CommandBar.SecondaryCommands>
 
             <CommandBar.Content>
-                <TextBlock x:Name="StatusText" Text="Now playing..." Margin="12,14"/>
+                <TextBlock HorizontalTextAlignment="Center" VerticalAlignment="Center" FontSize="15" x:Name="StatusText" Text="Now playing..." Margin="0,0,0,0"/>
             </CommandBar.Content>
         </CommandBar>
         <MediaPlayerElement x:Name="MyPlayer"/>
