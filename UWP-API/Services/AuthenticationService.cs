@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Newtonsoft.Json;
@@ -42,6 +43,29 @@ namespace UWP_API.Services
             {
                 LogIn.Token = await FileHandleService.ReadFile(fileName.ToString());
             }
+        }
+
+        public Dictionary<string, string> LogInValidate(String password, String email)
+        {
+            var errors = new Dictionary<string, string>();
+            //Password
+            if (string.IsNullOrEmpty(password))
+            {
+                errors.Add("passwordErr", "Password must be filled");
+            }
+            //Email
+            if (string.IsNullOrEmpty(email))
+            {
+                errors.Add("emailErr", "Email must be filled");
+            }
+            else
+            {
+                if (!Regex.IsMatch(email, "@gmail.com"))
+                {
+                    errors.Add("emailErr", "Email formar is incorrect");
+                }
+            }
+            return errors;
         }
     }
 }

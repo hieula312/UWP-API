@@ -42,10 +42,7 @@ namespace UWP_API.Pages
         {
             currentSong = e.ClickedItem as Song;
             MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
-            MyPlayer.MediaPlayer.Play();
-            PlayButton.Icon = new SymbolIcon(Symbol.Pause);
-            _isPlaying = true;
-            StatusText.Text = "Now Playing: " + currentSong.name;
+            When_Pause();
         }
 
         private void PlayButton_Clicked(object sender, RoutedEventArgs e)
@@ -60,17 +57,11 @@ namespace UWP_API.Pages
 
             if (_isPlaying)
             {
-                MyPlayer.MediaPlayer.Pause();
-                PlayButton.Icon = new SymbolIcon(Symbol.Play);
-                StatusText.Text = "Paused";
-                _isPlaying = false;
+                When_Play();
             }
             else
             {
-                MyPlayer.MediaPlayer.Play();
-                PlayButton.Icon = new SymbolIcon(Symbol.Pause);
-                StatusText.Text = "Now Playing: " + currentSong.name;
-                _isPlaying = true;
+                When_Pause();
             }
         }
 
@@ -85,15 +76,28 @@ namespace UWP_API.Pages
             currentSong = Songs.Items[currentIndex] as Song;
             Songs.SelectedIndex = currentIndex;
             MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
-            MyPlayer.MediaPlayer.Play();
-            PlayButton.Icon = new SymbolIcon(Symbol.Pause);
-            _isPlaying = true;
-            StatusText.Text = "Now Playing: " + currentSong.name;
+            When_Pause();
         }
 
         private void Previous_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void When_Play()
+        {
+            MyPlayer.MediaPlayer.Pause();
+            PlayButton.Icon = new SymbolIcon(Symbol.Play);
+            StatusText.Text = "Paused";
+            _isPlaying = false;
+        }
+
+        private void When_Pause()
+        {
+            MyPlayer.MediaPlayer.Play();
+            PlayButton.Icon = new SymbolIcon(Symbol.Pause);
+            StatusText.Text = "Now Playing: " + currentSong.name;
+            _isPlaying = true;
         }
     }
 }

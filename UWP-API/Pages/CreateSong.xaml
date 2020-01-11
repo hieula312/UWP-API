@@ -8,13 +8,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid x:Name="main">
+    <Grid>
         <Grid.Background>
             <ImageBrush
                 Stretch="UniformToFill"
                 ScrollViewer.ZoomMode="Disabled"
                 Opacity="0.8"
-                ImageSource="/Assets/img/headphone3.jpg"/>
+                ImageSource="/Assets/img/img6.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -27,10 +27,10 @@
         <TextBlock
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
-             Foreground="Black"
+             Foreground="#f0a461"
             Padding="0,00,0,0"
             FontSize="60">
-            UPLOAD SONG
+            CREATE SONG
         </TextBlock>
         <Grid
             Grid.Row="1"
@@ -47,72 +47,78 @@
                     Margin="0,10,0,0"
                     x:Name="name"
                     FontSize="25"
-                    Foreground="Black"
+                    Foreground="DimGray"
                     PlaceholderText="Name"/>
                 <TextBlock
+                    Margin="0,0,0,5"
                     x:Name="nameErr"
                     FontSize="15"
-                    Foreground="red"
+                    Foreground="#f0a461"
                     TextAlignment="Left">
                 </TextBlock>
                 <TextBox
                     Margin="0,10,0,0"
                     x:Name="description"
 					FontSize="25"
-					Foreground="Black"
+					Foreground="DimGray"
                     PlaceholderText="Description"/>
                 <TextBlock
-                    x:Name="desErr"
+                    Margin="0,0,0,5"
+                    x:Name="descriptionErr"
                     FontSize="15"
-                    Foreground="red"
+                    Foreground="#f0a461"
                     TextAlignment="Left">
                 </TextBlock>
                 <TextBox
                     Margin="0,10,0,0"
                     x:Name="signer"
                     FontSize="25"
-                    Foreground="Black"
+                    Foreground="DimGray"
                     PlaceholderText="Singer"/>
                 <TextBlock
-                    x:Name="signerErr"
+                    Margin="0,0,0,5"
+                    x:Name="singerErr"
                     FontSize="15"
-                    Foreground="red"
+                    Foreground="#f0a461"
                     TextAlignment="Left">
                 </TextBlock>
                 <TextBox
                     Margin="0,10,0,0"
                     x:Name="author"
                     FontSize="25"
-                    Foreground="Black"
+                    Foreground="DimGray"
                     PlaceholderText="Author"/>
                 <TextBlock
+                    Margin="0,0,0,5"
                     x:Name="authorErr"
                     FontSize="15"
-                    Foreground="red"
+                    Foreground="#f0a461"
                     TextAlignment="Left">
                 </TextBlock>
                 <TextBox
                     Margin="0,10,0,0"
                     x:Name="thumbnail"
                     FontSize="25"
-                    Foreground="Black"
+                    Foreground="DimGray"
                     PlaceholderText="Thumbnail"/>
                 <TextBlock
+                    Margin="0,0,0,5"
                     x:Name="thumbnailErr"
                     FontSize="15"
-                    Foreground="red"
+                    Foreground="#f0a461"
                     TextAlignment="Left">
                 </TextBlock>
                 <TextBox
                     Margin="0,10,0,0"
                     x:Name="link"
                     FontSize="25"
-                    Foreground="Black"
+                    Foreground="DimGray"
                     PlaceholderText="Link"/>
                 <TextBlock
+                    Margin="0,0,0,5"
                     x:Name="linkErr"
                     FontSize="15"
-                    Foreground="red"
+                    Foreground="#f0a461"
                     TextAlignment="Left">
                 </TextBlock>
                 <Grid
@@ -120,11 +126,12 @@
                     <Button
                         HorizontalAlignment="Center"
                         Grid.Column="0"
-                        Background="Bisque"
-                        Margin="0,20,0,0"
+                        Background="#f0a461"
+                        Foreground="DimGray"
+                        Margin="0,20,0,20"
                         FontSize="30"
                         Click="UploadSong_Clicked">
-                        Upload Song
+                        Create
                     </Button>
                 </Grid>
             </StackPanel>

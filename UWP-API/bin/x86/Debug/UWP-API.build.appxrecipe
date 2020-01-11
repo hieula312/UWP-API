@@ -67,6 +67,24 @@
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\headphone7.jpg">
       <PackagePath>Assets\img\headphone7.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img1.jpg">
+      <PackagePath>Assets\img\img1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img2.jpg">
+      <PackagePath>Assets\img\img2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img3.jpg">
+      <PackagePath>Assets\img\img3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img4.jpg">
+      <PackagePath>Assets\img\img4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img5.jpg">
+      <PackagePath>Assets\img\img5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Assets\img\img6.jpg">
+      <PackagePath>Assets\img\img6.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\source\repos\UWP-API\UWP-API\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

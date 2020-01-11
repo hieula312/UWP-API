@@ -10,6 +10,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
@@ -33,17 +34,39 @@ namespace UWP_API.Pages
 
         private async void Login_Clicked(object sender, RoutedEventArgs e)
         {
+            Sanitize_ErrBlock();
             var password = this.password.Password;
             var email = this.email.Text;
-            Token = await _service.GetToken(email, password);
-            LogIn.Token = Token;
-            FileHandleService.WriteToFile("token.txt", Token);
-            this.Frame.Navigate(typeof(MyListSong));
+            var errors = _service.LogInValidate(password, email);
+            if (errors.Count > 0)
+            {
+                foreach (KeyValuePair<String, String> item in errors)
+                {
+                    var block = (TextBlock)this.FindName(item.Key);
+                    if (block != null)
+                    {
+                        block.Text = item.Value;
+                    }
+                }
+            }
+            else
+            {
+                Token = await _service.GetToken(email, password);
+                LogIn.Token = Token;
+                FileHandleService.WriteToFile("token.txt", Token);
+                this.Frame.Navigate(typeof(MyListSong));
+            }
             Debug.WriteLine(Token);
-            //MkNAapOe38lh0zrIT2hsp4aWbtjZvPk3a4ffHgelth5N7qhdzd50hyfdzEZ0MP7Z
         }
 
-        private void Register_Clicked(object sender, KeyRoutedEventArgs e)
+        private void Sanitize_ErrBlock()
+        {
+            emailErr.Text = "";
+            passwordErr.Text = "";
+        }
+
+
+        private void Register_Navigator(Hyperlink sender, HyperlinkClickEventArgs args)
         {
             this.Frame.Navigate(typeof(Register));
         }

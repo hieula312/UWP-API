@@ -16,16 +16,15 @@
                                                               >
             <NavigationView.MenuItems>
                 <NavigationViewItemHeader x:ConnectionId='3' x:Name="MainPagesHeader" Content="MENU"/>
-                <NavigationViewItem Tag="home" Icon="Home" Content="Home"/>
-                <NavigationViewItem Tag="myList" Icon="Audio" Content="My List Song"/>
-                <NavigationViewItem Tag="ourList" Icon="Audio" Content="Our List Song"/>
-                <NavigationViewItem Tag="createSong" Icon="Add" Content="Create Song"/>
-                <NavigationViewItem Tag="signUp" Content="Sign Up">
+                <NavigationViewItem x:ConnectionId='4' x:Name="SignIn" Tag="signIn" Content="Sign In" Icon="NewWindow"/>
+                <NavigationViewItem Tag="signUp" Content="Register">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem x:ConnectionId='4' x:Name="SignIn" Tag="signIn" Content="Sign In" Icon="NewWindow"/>
+                <NavigationViewItem Tag="myList" Icon="Audio" Content="My List Song"/>
+                <NavigationViewItem Tag="ourList" Icon="Audio" Content="Our List Song"/>
+                <NavigationViewItem Tag="createSong" Icon="Add" Content="Create Song"/>
                 <NavigationViewItem x:ConnectionId='5' x:Name="LogOut" Tag="logOut"  Icon="Add" Content="Log out"/>
             </NavigationView.MenuItems>
             <NavigationView.AutoSuggestBox>

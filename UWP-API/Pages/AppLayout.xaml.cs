@@ -41,7 +41,7 @@ namespace UWP_API.Pages
         // List of ValueTuple holding the Navigation Tag and the relative Navigation Page
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
 {
-    ("home", typeof(Pages.LogIn)),
+    ("signIn", typeof(Pages.LogIn)),
     ("signUp", typeof(Pages.Register)),
     ("createSong", typeof(Pages.CreateSong)),
     ("myList", typeof(Pages.MyListSong)),
@@ -75,8 +75,15 @@ namespace UWP_API.Pages
             // If navigation occurs on SelectionChanged, this isn't needed.
             // Because we use ItemInvoked to navigate, we need to call Navigate
             // here to load the home page.
-            NavView_Navigate("home", new EntranceNavigationTransitionInfo());
-
+            checkToken();
+            if (LogIn.Token != null)
+            {
+                NavView_Navigate("myList", new EntranceNavigationTransitionInfo());
+            }
+            else
+            {
+                NavView_Navigate("signIn", new EntranceNavigationTransitionInfo());
+            }
             // Add keyboard accelerators for backwards navigation.
             var goBack = new KeyboardAccelerator { Key = VirtualKey.GoBack };
             goBack.Invoked += BackInvoked;
@@ -104,6 +111,14 @@ namespace UWP_API.Pages
             {
                 var navItemTag = args.InvokedItemContainer.Tag.ToString();
                 NavView_Navigate(navItemTag, args.RecommendedNavigationTransitionInfo);
+                if (navItemTag.Equals("myList") || navItemTag.Equals("ourList") || navItemTag.Equals("createSong"))
+                {
+                    if (LogIn.Token == null)
+                    {
+                        NavView_Navigate("signIn", new EntranceNavigationTransitionInfo());
+                    }
+                }
+                if (LogIn.Token == null)
                 if (navItemTag.Equals("logOut"))
                 {
                     LogOutFunction();
@@ -207,8 +222,6 @@ namespace UWP_API.Pages
                     .OfType<NavigationViewItem>()
                     .First(n => n.Tag.Equals(item.Tag));
 
-                NavView.Header =
-                    ((NavigationViewItem)NavView.SelectedItem)?.Content?.ToString();
             }
         }
     }

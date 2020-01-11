@@ -14,7 +14,7 @@
                 Stretch="UniformToFill"
                 ScrollViewer.ZoomMode="Disabled"
                 Opacity="0.8"
-                ImageSource="/Assets/img/headphone4.jpg"/>
+                ImageSource="/Assets/img/img6.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -27,7 +27,7 @@
         <TextBlock
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
-             Foreground="Black"
+             Foreground="#f0a461"
             Padding="0,20,0,0"
             FontSize="60">
             SIGN IN
@@ -47,23 +47,25 @@
                     Margin="0,0,0,0"
                     x:Name="email"
 					FontSize="25"
-					Foreground="Black"
+					Foreground="DimGray"
                     PlaceholderText="Email"/>
                 <TextBlock
+                    Margin="0,0,0,5"
                     x:Name="emailErr"
                     FontSize="20"
-                    Foreground="red"
+                    Foreground="#f0a461"
                     TextAlignment="Left">
                 </TextBlock>
                 <PasswordBox
                     x:Name="password"
                     FontSize="25"
                     PlaceholderText="Password"
-                    Foreground="Black"/>
+                    Foreground="DimGray"/>
                 <TextBlock
+                Margin="0,0,0,5"
                 x:Name="passwordErr"
                 FontSize="20"
-                Foreground="red"
+                Foreground="#f0a461"
                 TextAlignment="Left"
                 ></TextBlock>
                 <StackPanel Orientation="Horizontal">
@@ -82,14 +84,18 @@
                         Grid.Column="2"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                        Background="Bisque"
+                        Background="#f0a461"
                         Margin="0,20,0,0"
                         FontSize="25"
-                        FontFamily="Adobe Arabic"
+                        Foreground="DimGray"
                         Click="Login_Clicked">
-                        Sign In
+                        Enjoy now
                     </Button>
-                    <TextBlock Foreground="Black" FontFamily="Adobe Arabic" VerticalAlignment="Bottom" FontSize="15" Grid.Column="3"  PreviewKeyDown="Register_Clicked" >Don't have account?</TextBlock>
+                    <TextBlock Foreground="DimGray"  VerticalAlignment="Bottom" FontSize="15" Grid.Column="3" >
+                        <Hyperlink Foreground="DimGray" Click="Register_Navigator">
+                            Don't have account?
+                        </Hyperlink>
+                    </TextBlock>
                 </Grid>
             </StackPanel>
         </Grid>

@@ -69,15 +69,18 @@ namespace UWP_API.Model
                     errors.Add("emailErr", "Email formar is incorrect");
                 }
             }
-            if ((DateTime.Now - Register.birthDayVal).TotalDays < 3650)
-            {
-                errors.Add("birthdayErr", "User must be over 10 years old");
 
-            }else
+            //Date
+            if ((string.IsNullOrEmpty(this.birthday.ToString())))
             {
-                if ((string.IsNullOrEmpty(this.birthday.ToString())))
+                errors.Add("birthdayErr", "Birthday must be filled");
+            }
+            else
+            {
+                if ((DateTime.Now - Register.birthDayVal).TotalDays < 3650)
                 {
-                    errors.Add("birthdayErr", "Birthday must be filled");
+                    errors.Add("birthdayErr", "User must be over 10 years old");
+
                 }
             }
             return errors;

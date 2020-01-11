@@ -26,7 +26,7 @@
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock x:ConnectionId='13'                        FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,0,0,0"/>
-                                <TextBlock Text=" Likes" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                <TextBlock Text="" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
                             </StackPanel>
                         </StackPanel>
                     </Grid>

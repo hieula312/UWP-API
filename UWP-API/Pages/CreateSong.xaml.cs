@@ -34,22 +34,44 @@ namespace UWP_API.Pages
 
         private async void UploadSong_Clicked(object sender, RoutedEventArgs e)
         {
+            Sanitize_ErrBlock();
             var song = new Song()
             {
                 name = name.Text,
+                description = description.Text,
                 singer = signer.Text,
                 author = author.Text,
                 thumbnail = thumbnail.Text,
                 link = link.Text
             };
-//            var errors = song.CheckValidate();
-//            if (errors.Count > 0)
-//            {
-//
-//            }
-            song = await _service.Create(song);
-            this.Frame.Navigate(typeof(MyListSong));
-            Debug.Write(song.name);
+            var errors = song.CheckValidate();
+            if (errors.Count > 0)
+            {
+                foreach (KeyValuePair<String, String> item in errors)
+                {
+                    var block = (TextBlock)this.FindName(item.Key);
+                    if (block != null)
+                    {
+                        block.Text = item.Value;
+                    }
+                }
+            }
+            else
+            {
+                song = await _service.Create(song);
+                this.Frame.Navigate(typeof(MyListSong));
+                Debug.Write(song.name);
+            }
+        }
+
+        private void Sanitize_ErrBlock()
+        {
+            authorErr.Text = "";
+            singerErr.Text = "";
+            descriptionErr.Text = "";
+            thumbnailErr.Text = "";
+            nameErr.Text = "";
+            linkErr.Text = "";
         }
     }
 }

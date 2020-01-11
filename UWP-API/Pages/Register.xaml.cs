@@ -58,21 +58,17 @@ namespace UWP_API.Pages
                 email = email.Text,
                 birthday = String.Format("{0:yyyy-MM-dd}",birthDayVal).ToString()
             };
-            Debug.WriteLine(String.Format("{0:yyyy-MM-dd}", birthDayVal).ToString());
             var errors = member.CheckValidate();
-
-            if (errors.Count > 0 && errors.Values != null)
+            if (errors.Count > 0)
             {
-                
-                string contentErr = "";
                 foreach (KeyValuePair<String, String> item in errors)
                 {
                     var block = (TextBlock)this.FindName(item.Key);
-                    Debug.WriteLine(block);
-                    block.Text = item.Value;
+                    if (block != null)
+                    {
+                        block.Text = item.Value;
+                    }
                 }
-
-                //addressErr.Text = contentErr;
             }                
             else
             {
@@ -88,7 +84,7 @@ namespace UWP_API.Pages
             birthdayErr.Text = "";
             emailErr.Text = "";
             fisrtNameErr.Text = "";
-            lastName.Text = "";
+            lastNameErr.Text = "";
             passwordErr.Text = "";
             birthdayErr.Text = "";
         }

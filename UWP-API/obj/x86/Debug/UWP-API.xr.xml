@@ -35,8 +35,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
       <RootProperty Name="Tag" />
-      <RootProperty Name="Icon" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Icon" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
       <RootProperty Name="FontFamily" />
@@ -84,10 +84,10 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Padding" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Style" />
       <RootProperty Name="LineHeight" />
@@ -95,7 +95,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="MaxLines" />
       <RootProperty Name="Opacity" />
-      <RootEvent Name="PreviewKeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />
@@ -110,8 +109,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="FontFamily" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="UWP_API.Pages.CameraDemo" />
@@ -140,6 +139,11 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Hyperlink">
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Inlines" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="UWP_API.Pages.LogIn" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
@@ -173,8 +177,8 @@
     <RootType FullName="UWP_API.Pages.MyListSong" />
     <RootType FullName="UWP_API.Pages.OurListSong" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
-      <RootProperty Name="Opacity" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Opacity" />
       <RootProperty Name="GroupName" />
       <RootProperty Name="Tag" />
       <RootProperty Name="IsChecked" />

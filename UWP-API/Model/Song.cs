@@ -19,51 +19,50 @@ namespace UWP_API.Model
         public Dictionary<string, string> CheckValidate()
         {
             var errors = new Dictionary<string, string>();
-            //Password
+            //Name
             if (string.IsNullOrEmpty(this.name))
             {
-                errors.Add("name", "Name must be filled");
+                errors.Add("nameErr", "Name must be filled");
             }
-
+            //Description
             if (string.IsNullOrEmpty(this.description))
             {
-                errors.Add("description", "Description must be filled");
+                errors.Add("descriptionErr", "Description must be filled");
             }
-
+            //Author
             if (string.IsNullOrEmpty(this.author))
             {
-                errors.Add("author", "Author must be filled");
+                errors.Add("authorErr", "Author must be filled");
             }
-
+            //Singer
             if (string.IsNullOrEmpty(this.singer))
             {
-                errors.Add("singer", "Singer must be filled");
+                errors.Add("singerErr", "Singer must be filled");
             }
-
-            if (Regex.IsMatch(this.link, "^(http|https)://"))
+            //Link
+            if (string.IsNullOrEmpty(this.link))
             {
-                errors.Add("link", "Link format is incorrect");
+                errors.Add("linkErr", "Link must be filled");
             }
             else
             {
-                if (string.IsNullOrEmpty(this.link))
+                if (!Regex.IsMatch(this.link, "^(http|https)://"))
                 {
-                    errors.Add("link", "Link must be filled");
+                    errors.Add("linkErr", "Link format is incorrect");
                 }
             }
-
-            if (Regex.IsMatch(this.thumbnail, "^(http|https)://"))
+            //Thumbnail
+            if (string.IsNullOrEmpty(this.thumbnail))
             {
-                errors.Add("thumbnail", "Thumbnail format is incorrect");
+                errors.Add("thumbnailErr", "Thumbnail must be filled");
             }
             else
             {
-                if (string.IsNullOrEmpty(this.link))
+                if (!Regex.IsMatch(this.thumbnail, "^(http|https)://"))
                 {
-                    errors.Add("thumbnail", "Link must be filled");
+                    errors.Add("thumbnailErr", "Thumbnail format is incorrect");
                 }
             }
-
             return errors;
         }
     }
