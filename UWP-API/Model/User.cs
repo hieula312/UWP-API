@@ -51,7 +51,7 @@ namespace UWP_API.Model
             }
             else
             {
-                if (!Regex.IsMatch(this.phone, "/((09|03|07|08|05)+([0-9]{8})\b)/g"))
+                if (!Regex.IsMatch(this.phone, "(09|01[2|6|8|9])+([0-9]{8})\\b"))
                 {
                     errors.Add("phoneErr", "Phone format is incorrect");
                 }

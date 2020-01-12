@@ -14,13 +14,10 @@
                          Loaded="NavView_Loaded"
                          ItemInvoked="NavView_ItemInvoked"
                          BackRequested="NavView_BackRequested"
-                         
                          FontSize="80"
                          PaneTitle="MUSIC TOWN"
                          IsBackButtonVisible="Collapsed" 
-                         CompactPaneLength="0"
-                         
-                         >
+                         CompactPaneLength="0">
             <NavigationView.MenuItems>
                 <NavigationViewItemHeader x:Name="MainPagesHeader" Content="MENU"/>
                 <NavigationViewItem Visibility="Collapsed" x:Name="SignIn" Tag="signIn" Content="Sign In" Icon="NewWindow"/>
@@ -59,7 +56,7 @@
                         <Setter Target="NavViewSearchBox.Width" Value="200"/>
                         <Setter Target="MainPagesHeader.Visibility" Value="Collapsed"/>
                         <!-- Leave the next line for left-only navigation. -->
-                        <Setter Target="ContentFrame.Padding" Value="24,0,24,24"/>
+                        <Setter Target="ContentFrame.Padding" Value="0,0,0,0"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>

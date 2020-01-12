@@ -1,11 +1,15 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Media.Capture;
@@ -18,6 +22,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -28,6 +33,8 @@ namespace UWP_API.Pages
     /// </summary>
     public sealed partial class CameraDemo : Page
     {
+        private static string CONTENT_TYPE = "application/json";
+        private static string LOGIN_API_URL = "https://2-dot-backup-server-002.appspot.com/upload-my-file-handle";
         private StorageFile photo;
 
         public CameraDemo()
@@ -115,13 +122,39 @@ namespace UWP_API.Pages
             picker.FileTypeFilter.Add(".mp3");
 
             Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
-            if (file != null)
+            await PushFile(file);
+            //Stream stream = await file.OpenStreamForReadAsync();
+        }
+
+        private async Task PushFile(StorageFile file)
+        {
+            JObject cloudInfo = new JObject();
+            cloudInfo["cloudName"] = "daaycakkk";
+            cloudInfo["apiKey"] = "221664986237777";
+            cloudInfo["apiSecret"] = "F5q-h6o5IF7BPknxCsSeVnb8p0Y";
+            //Chuyen thanh dang JSON
+            var cloudJson = JsonConvert.SerializeObject(cloudInfo);
+            var formData = new MultipartFormDataContent();
+            //Dong goi gui len
+            HttpContent contentToSend = new StringContent(cloudJson, Encoding.UTF8, CONTENT_TYPE);
+            formData.Add(contentToSend);
+            var stream = await file.OpenStreamForReadAsync();
+            HttpContent content = new StringContent("myFile");
+            content = new StreamContent(stream);
+            content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
             {
-                // Application now has read/write access to the picked file
-            }
-            else
-            {
-            }
+                Name = "myFile",
+                FileName = file.Name
+            };
+            formData.Add(content);
+            //Goi shipper
+            HttpClient httpClient = new HttpClient();
+            //Lay ket qua
+            var response = await httpClient.PostAsync(LOGIN_API_URL, formData);
+            //Doc ket qua
+            var stringcontent = await response.Content.ReadAsStringAsync();
+            Debug.WriteLine(response.Content.ReadAsStringAsync().Result);
+            Debug.WriteLine("url" + (string)JObject.Parse(stringcontent)["secure_url"]);
         }
     }
 }

@@ -116,18 +116,33 @@
                 </TextBlock>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock
-                        Opacity="0.6"
-                        Margin="0,10,0,0"
-                        VerticalAlignment="Center"
-                        FontSize="25"
-                        Foreground="Black"
-                    >Date of Birth</TextBlock>
-                    <CalendarDatePicker x:ConnectionId='20'
-                                                            
-                        x:Name="birthDay"
-                        Margin="20,3,0,0"
-                        FontSize="25"
-                    ></CalendarDatePicker>
+                                Opacity="0.6"
+                                Margin="0,10,0,0"
+                                VerticalAlignment="Center"
+                                FontSize="25"
+                                Foreground="Black">
+                                Date of Birth
+                    </TextBlock>
+                    <CalendarDatePicker x:ConnectionId='19'
+                                                                    
+                                x:Name="birthDay"
+                                Margin="20,0,0,0"
+                                FontSize="25"
+                            ></CalendarDatePicker>
+                    <TextBlock
+                                Opacity="0.6"
+                                Margin="230,10,11,0"
+                                VerticalAlignment="Center"
+                                FontSize="25"
+                                Foreground="Black"
+                            >Avatar</TextBlock>
+                    <Border BorderThickness="2" BorderBrush="DimGray">
+                    <Button x:ConnectionId='20' Background="Gainsboro"
+                                    Foreground="DimGray"
+                                    Margin="0,0,0,0"
+                                    FontSize="25" 
+                                                     >Capture</Button>
+                    </Border>
                 </StackPanel>
                 <TextBlock x:ConnectionId='14'
                     x:Name="birthdayErr"
@@ -143,23 +158,12 @@
                         FontSize="25"
                         Foreground="Black"
                     >Gender</TextBlock>
-                    <RadioButton x:ConnectionId='17'                         Margin="0,0,0,5" Opacity="0.7"  GroupName="gender" Tag="Male" IsChecked="True">Male</RadioButton>
-                    <RadioButton x:ConnectionId='18'                         Margin="0,0,0,5" Opacity="0.7"  GroupName="gender" Tag="Female" >Female</RadioButton>
-                    <RadioButton x:ConnectionId='19'                         Margin="0,0,0,5" Opacity="0.7"  GroupName="gender" Tag="Other">Other</RadioButton>
+                    <RadioButton x:ConnectionId='16'                         Margin="0,0,0,5" Opacity="0.7"  GroupName="gender" Tag="Male" IsChecked="True">Male</RadioButton>
+                    <RadioButton x:ConnectionId='17'                         Margin="0,0,0,5" Opacity="0.7"  GroupName="gender" Tag="Female" >Female</RadioButton>
+                    <RadioButton x:ConnectionId='18'                         Margin="0,0,0,5" Opacity="0.7"  GroupName="gender" Tag="Other">Other</RadioButton>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Opacity="0.6"
-                        Margin="0,10,0,0"
-                        VerticalAlignment="Center"
-                        FontSize="25"
-                        Foreground="Black"
-                    >Avatar</TextBlock>
-                    <Button x:ConnectionId='16' Background="#f0a461"
-                            Foreground="DimGray"
-                            Margin="20,0,0,5"
-                            FontSize="25" 
-                                             >Capture</Button>
+
                 </StackPanel>
                 <Grid
                     Padding="0,0,0,0">
@@ -168,7 +172,7 @@
                                            
                         Background="#f0a461"
                         Foreground="DimGray"
-                        Margin="0,20,0,20"
+                        Margin="0,10,0,20"
                         FontSize="30" VerticalAlignment="Top">
                         Register Now
                     </Button>

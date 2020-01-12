@@ -47,13 +47,10 @@
             </CommandBar.SecondaryCommands>
 
             <CommandBar.Content>
-                <TextBlock x:ConnectionId='8' x:Name="StatusText" Text="Now playing..." Margin="12,14"/>
+                <TextBlock x:ConnectionId='8' HorizontalTextAlignment="Center" VerticalAlignment="Center" FontSize="15" x:Name="StatusText" Text="Now playing..." Margin="12,14"/>
             </CommandBar.Content>
         </CommandBar>
         <MediaPlayerElement x:ConnectionId='4' x:Name="MyPlayer"/>
-        <!--không được dùng-->
-        <!--<MediaPlayerElement x:Name="MyPlayer" AutoPlay="False"
-                            AreTransportControlsEnabled="True"></MediaPlayerElement>-->
     </StackPanel>
 </Page>
 

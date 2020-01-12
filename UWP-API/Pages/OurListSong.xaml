@@ -47,12 +47,9 @@
             </CommandBar.SecondaryCommands>
 
             <CommandBar.Content>
-                <TextBlock HorizontalTextAlignment="Center" VerticalAlignment="Center" FontSize="15" x:Name="StatusText" Text="Now playing..." Margin="0,0,0,0"/>
+                <TextBlock HorizontalTextAlignment="Center" VerticalAlignment="Center" FontSize="15" x:Name="StatusText" Text="Now playing..." Margin="12,14"/>
             </CommandBar.Content>
         </CommandBar>
         <MediaPlayerElement x:Name="MyPlayer"/>
-        <!--không được dùng-->
-        <!--<MediaPlayerElement x:Name="MyPlayer" AutoPlay="False"
-                            AreTransportControlsEnabled="True"></MediaPlayerElement>-->
     </StackPanel>
 </Page>
